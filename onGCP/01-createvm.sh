@@ -37,7 +37,7 @@ gcloud compute --project=$PROJECT_ID instances create $VMNAME \
 
 echo "Cria a regra de firewall 'firewall-fiap-plataformas' no projeto $PROJECT_ID"
 
-gcloud compute --project=$PROJECT_ID firewall-rules create firewall-fiap-plataformas \
+gcloud compute --project=$PROJECT_ID firewall-rules create firewall-fiap-plataformas-01 \
    --description=Libera\ portas\ necess\árias\ para\ pr\áticas\ de\ plataformas\ cognitivas \
    --direction=INGRESS --priority=1000 --network=default --action=ALLOW \
    --rules=tcp:1234,tcp:1235,tcp:1236,tcp:1237 \
