@@ -35,9 +35,10 @@ gcloud compute --project=$PROJECT_ID instances create $VMNAME \
   --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=$VMNAME \
   --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring
 
-echo "Cria a regra de firewall 'firewall-fiap-plataformas-01' no projeto $PROJECT_ID"
+FIRENAME=firewall-fiap-plataformas-01
+echo "Cria a regra de firewall $FIRENAME no projeto $PROJECT_ID"
 
-gcloud compute --project=$PROJECT_ID firewall-rules create firewall-fiap-plataformas-01 \
+gcloud compute --project=$PROJECT_ID firewall-rules create $FIRENAME \
    --description=Libera\ portas\ necess\árias\ para\ pr\áticas\ de\ plataformas\ cognitivas \
    --direction=INGRESS --priority=1000 --network=default --action=ALLOW \
    --rules=tcp:1234,tcp:1235,tcp:1236,tcp:1237 \
