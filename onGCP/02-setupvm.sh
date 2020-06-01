@@ -2,6 +2,7 @@
 
 
 echo "Install programas uteis"
+sudo apt-get -y update
 sudo apt-get -y install tree
 
 
