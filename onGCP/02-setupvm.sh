@@ -6,6 +6,6 @@ anaconda_url=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.
 cd /tmp
 curl -O $anaconda_url
 #sudo bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
-bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
+bash Miniconda3-latest-Linux-x86_64.sh
 #Restart terminal
 source ~/.bashrc
