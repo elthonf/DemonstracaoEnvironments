@@ -23,7 +23,7 @@ gcloud compute --project=$PROJECT_ID instances create vm-fiap-plataformas \
   --tags=http-server,https-server,fiap-plataformas \
   --image=ubuntu-1804-bionic-v20200529 \
   --image-project=ubuntu-os-cloud \
-  --boot-disk-size=20GB --boot-disk-type=pd-standard --boot-disk-device-name=vm-fiap-plataformas \
+  --boot-disk-size=15GB --boot-disk-type=pd-standard --boot-disk-device-name=vm-fiap-plataformas \
   --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring
 
 echo "Cria a regra de firewall 'firewall-fiap-plataformas' no projeto $PROJECT_ID"
