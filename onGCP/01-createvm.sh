@@ -1,6 +1,7 @@
 #$PROJECT_ID=curso-gcp-ml-tensorflow
 #unset DEVSHELL_PROJECT_ID
 
+# OBTENDO O PROJETO
 if [ ! -z "$DEVSHELL_PROJECT_ID" ] && [ -z "$PROJECT_ID" ]
 then
   PROJECT_ID=$DEVSHELL_PROJECT_ID
@@ -15,9 +16,17 @@ fi
 echo "Usando PROJECT_ID: $PROJECT_ID"
 
 
-echo "Cria a máquina 'vm-fiap-plataformas' no projeto $PROJECT_ID"
+# OBTENDO O NOME DA MV
+if [ $# -gt 0 ]; then # Se passar a data, usa o primeiro arrgumento
+    VMNAME=$1
+else                  #Nao passou a data
+    VMNAME=vm-fiap-plataformas
+fi
 
-gcloud compute --project=$PROJECT_ID instances create vm-fiap-plataformas \
+
+echo "Cria a máquina $VMNAME no projeto $PROJECT_ID"
+
+gcloud compute --project=$PROJECT_ID instances create $VMNAME \
   --zone=us-east1-b \
   --machine-type=n1-standard-1 --subnet=default \
   --tags=http-server,https-server,fiap-plataformas \
