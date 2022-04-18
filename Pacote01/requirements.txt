@@ -1,4 +1,4 @@
 #Ambiente Python 3.6
 #Requisitos:
 
-numpy==1.17.0
+numpy==1.21.0
