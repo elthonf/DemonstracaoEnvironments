@@ -1,1 +1,4 @@
+#Ambiente Python 3.7
+#Requisitos:
+
 numpy==1.18.1
