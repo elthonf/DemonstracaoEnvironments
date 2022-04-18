@@ -1,4 +1,4 @@
 #Ambiente Python 2.7
 #Requisitos:
 
-numpy==1.13.0
+numpy==1.21.0
